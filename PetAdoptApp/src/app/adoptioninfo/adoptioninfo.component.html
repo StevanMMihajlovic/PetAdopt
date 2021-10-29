@@ -1,0 +1,19 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Pet Id</th>
+        <th scope="col">Pet Name</th>
+        <th scope="col">Name</th>
+        <th scope="col">Contact</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let i of table.results">
+        <td>{{i.petId}}</td>
+        <td>{{i.petName}}</td>
+        <td>{{i.name}}</td>
+        <td>{{i.contact}}</td>
+        <td><button type="button" class="btn btn-primary" (click)="deleteRequest(i._id)">Approve</button></td>
+      </tr>
+    </tbody>
+</table>

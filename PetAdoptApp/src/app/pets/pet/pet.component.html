@@ -1,0 +1,8 @@
+<div class="row">
+    <div *ngFor="let pet of pets.results" class="col-3" [routerLink]="['/adoptions', pet._id]">
+        <img src="{{pet.image}}" height="60%" width="100%">
+        <h4 align="center">{{pet.name}}</h4>
+        <p>Category: {{pet.category}}  Size: {{pet.size_kg}}</p> 
+        <p>Sex: {{pet.sex}}</p>
+    </div>
+</div>

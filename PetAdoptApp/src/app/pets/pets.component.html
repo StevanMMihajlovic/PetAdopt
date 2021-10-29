@@ -1,0 +1,34 @@
+<div class="row">
+    <form>
+        <div class="row">
+            <div class="col-4">
+                <select name="sel" id="sel" [(ngModel)]="params.filter.category" (change)="getPets()">
+                    <option value="">All</option>
+                    <option value="cat">Cats</option>
+                    <option value="dog">Dogs</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="col-4">
+                Sex:
+                <input type="radio" name="rad" id="rad1" value="" [(ngModel)]="params.filter.sex" (change)="getPets()">
+                <label for="rad1">Any</label>
+                <input type="radio" name="rad" id="rad2" value="f" [(ngModel)]="params.filter.sex" (change)="getPets()">
+                <label for="rad2">Female</label>
+                <input type="radio" name="rad" id="rad3" value="m" [(ngModel)]="params.filter.sex" (change)="getPets()">
+                <label for="rad3">Male</label>
+            </div>
+            <div class="col-4">
+                <select name="sel" id="sel" [(ngModel)]="params.sort" (change)="getPets()">
+                    <option value="" disabled selected>--</option>
+                    <option value="name">Name</option>
+                    <option value="size_kg">Size in kgs</option>
+                </select>
+            </div>
+        </div> 
+    </form>
+</div>
+<br>
+<div class="row">
+    <app-pet [pets]="pets"></app-pet>
+</div>
